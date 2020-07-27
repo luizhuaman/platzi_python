@@ -23,7 +23,7 @@ print(valor1)
 print(valor2)
 print(valor3)
 
-#OPERADORES
+#OPERADORES MATEMATICOS
 # > , < , >= , <= , == , != 
 #-> ejemplo
 variable1 = 10
@@ -33,7 +33,7 @@ print(menor_igual) #resulta true
 
 #Podemos verificar si dos variables son iguales con IS
 igual_is = variable1 is variable2
-print(igual_is) #result true or falso
+print(igual_is) #result true or falso, en este caso es FALSE
 
 #OPERADORES LOGICOS
 result_end = True and menor_igual #TRUE
@@ -42,12 +42,15 @@ print(result_end) #resulta true ya que es necesario que ambos valores sean true.
 print(result_end2) #resulta true ya que es necesario que al menos un valor sea true.
 
 #Entrada de datos
-nombre=input("Cual es tu nombre?\n")
+# SHIFT+ALT+A = COMENTAR BLOQUER
+# CTRL + } = COMETAR LINEA
+""" nombre=input("Cual es tu nombre?\n")
 edad=int(input("Cual es tu edad?\n"))
 peso=float(input("Cual es tu peso?\n"))
-autorizado=input("Estas autorizado?(si/no)\n") =="si"
+autorizado=input("Estas autorizado?(si/no)\n")
 
-print("Hola {}, tienes {} años y tu peso es {}\n¿Estas autorizado? {}".format(nombre,edad,peso,autorizado))
+# Formato para imprimir
+print("Hola {}, tienes {} años y tu peso es {}\n¿Estas autorizado? {}".format(nombre,edad,peso,autorizado)) """
 # print("Autorizado", autorizado)
 
 """
@@ -56,40 +59,73 @@ en parrafo.
 """
 
 #Lista: permite almacenar cualquier valor (int,float,string)
-lista = ["Eduardo",23,True,19.5] #tamaño de 4
+lista = ["Eduardo",23,True,19.5] #tamaño de 4 -> lista=[0,1,2,3]
 cursos=["python","django","flask","c","c++","c#","java","php","sql"]
-print(cursos[3:8:2]) #[start:end:step] #[:] [start:] [:end]
+print('Ejm: [start:end:step]')
+print(cursos[3:8:2]) 
+print('Ejm: [:]')
+print(lista[:]) 
+print('Ejm: [start:]') 
+print(cursos[2:]) 
+print('Ejm: [:end]')
+print(cursos[:3]) 
+
 lista2 = [8.17, 90, 50, 1, 1.32]
-lista2.sort(reverse=True) #ordena descendentemente
+print('lista2.sort(reverse=True) ordena descendentemente')
+lista2.sort(reverse=True)
+print(lista2[:]) 
 print("El menor numero de mi lista es {} y el mayor es {}".format(min(lista2),max(lista2)))
 print("La longitud de la lista es: {}".format(len(lista2)))
-print(lista2)
-#resultado = 8 in lista2 para ver si un valor esta en la lista, return true or false.
+
+#capturar indice en la lista
 valor=1.32
 print("El indice de valor {} en la lista es {}".format(valor,lista2.index(valor)))
 #lista2.count():para saber la cantidad de veces que se ha repetido un valor 
 #lista.append():agrega un elemento al final
-#lista.insert(index,elemento): inserta en el indice dado y correo los demas valores.
-#lista.remove(elemento): elimana el primer elemento que encuentra
-#return_value = languages.pop(3) elimina elemento con index3 y return, si no hay index, default -1.
-#lista.clear() deja empty la list
+#lista.insert(index,elemento): inserta en el indice dado y corre los demas valores.
+#lista.remove(elemento): elimana el primer elemento que encuentra - elemento-> input var
+#return_value = languages.pop(3) elimina elemento con index 3 y returna, si no hay index, default -1.
+#lista.clear() deja empty o vacia la lista
 #list.reverse() voltea la lista.
 #lista1.extend(list2): agrega todos los elementos de la lista2 al final de la lista1
-# language list
-# language = ['French', 'English', 'German']
-# language tuple
-# language_tuple = ('Spanish', 'Portuguese')
-# language set
-# language_set = {'Chinese', 'Japanese'}
-# appending element of language tuple
-# language.extend(language_tuple)
-# appending element of language set
-# language.extend(language_set)
+
+#language list es una colección ordenada y modificable. Permite miembros duplicados.
+print('Language_lista')
+language = ['French', 'English', 'German']
+print(language[:])
+
+# language tuple: colección ordenada e inmutable, se escriben entre corchetes. Permite miembros duplicados.
+print('Language_tupla')
+language_tuple = ('Spanish', 'Portuguese')
+print(language_tuple[:])
+
+# language set: coleccion o conjunto que no esta ordenado ni indexado. No hay miembros duplicados.
+print('Language_set')
+language_set = {'Chinese', 'Japanese'}
+print(language_set)
+
+# Dictionary es una colección desordenada, modificable e indexada. No hay miembros duplicados.
+print('Imprimir Diccionario')
+thisdict = {"brand": "Ford", "model": "Mustang", "year": 1964}
+print(thisdict)
+print('Imprimir Diccionario.model')
+print(thisdict["model"])
+
+# appending o agregar elemento of language tuple
+language.extend(language_tuple)
+print('Language_lista with/extend language_tuple')
+print(language[:])
+# appending o agregar element of language set
+language.extend(language_set)
+print('Language_lista with/extend language_set')
+print(language[:])
 
 #matrices
 fila1 = [10,20]
 fila2 = [30,40]
 matriz = [fila1,fila2]
+print('Imprimir Matriz')
+print(matriz)
 
 #tuplas: no se pueden modificar los elementos que almacena. Estas son mas rapidas para las consultas.
 #tuple -> () ; list -> []

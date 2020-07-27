@@ -23,7 +23,7 @@ print(valor1)
 print(valor2)
 print(valor3)
 
-#OPERADORES MATEMATICOS
+#OPERADORES DE COMPARACION
 # > , < , >= , <= , == , != 
 #-> ejemplo
 variable1 = 10

@@ -27,7 +27,7 @@ def exchanges(moneda,equivalencia,cantidad):
 def logica():
     punto_salida = 0
     while True:
-        try:
+        try:        
             while True:
                 moneda = int(input('''
                 Ingresa el indice de la moneda que quieres convertira  dolar:

@@ -18,7 +18,7 @@ def exchanges(moneda,equivalencia,cantidad):
         print(f'Los {cantidad} pesos mexicanos equivalen a {result} dolares')
     # Moneda Peruana
     elif moneda == 5:
-        result = round(float(cantidad * equivalencia),2)
+        result = cantidad * equivalencia
         print(f'Los {cantidad} soles equivalen a {result} dolares')
     # Otro
     else:
@@ -27,7 +27,7 @@ def exchanges(moneda,equivalencia,cantidad):
 def logica():
     punto_salida = 0
     while True:
-        try:        
+        try:
             while True:
                 moneda = int(input('''
                 Ingresa el indice de la moneda que quieres convertira  dolar:

@@ -89,15 +89,44 @@ print("El indice de valor {} en la lista es {}".format(valor,lista2.index(valor)
 #list.reverse() voltea la lista.
 #lista1.extend(list2): agrega todos los elementos de la lista2 al final de la lista1
 
-#language list es una colección ordenada y modificable. Permite miembros duplicados.
+#language list es una colección ordenada y modificable. Permite miembros duplicados. Entre corchetes
 print('Language_lista')
 language = ['French', 'English', 'German']
 print(language[:])
 
-# language tuple: colección ordenada e inmutable, se escriben entre corchetes. Permite miembros duplicados.
+print('Agrege el idioma Arabic')
+language.append('Arabic')
+# language.pop(2) Eliminar elemento de indice 2
+
+print('Imprimiendo los elementos de la lista con un FOR')
+for elemento in language:
+    print(elemento)
+
+# language tuple: colección ordenada e inmutable, se escriben entre parentesis. Permite miembros duplicados.
 print('Language_tupla')
 language_tuple = ('Spanish', 'Portuguese')
 print(language_tuple[:])
+
+print('Reasignar valores de una tupla')
+x = ("apple", "banana", "cherry")
+print(x)
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)
+
+# Funciones son iguales a métodos, la diferencia que las funciones dentro de una clase se le conoce como métodos, ahora las variables dentro de una clase se le conoce como propiedades.
+# ___Propiedades que aplican a tuplas:
+# len
+# max
+# min
+# sum
+# any
+# all
+# sorted
+# ______Métodos que aplican a tuplas:
+# index
+# count
 
 # language set: coleccion o conjunto que no esta ordenado ni indexado. No hay miembros duplicados.
 print('Language_set')
@@ -105,17 +134,36 @@ language_set = {'Chinese', 'Japanese'}
 print(language_set)
 
 # Dictionary es una colección desordenada, modificable e indexada. No hay miembros duplicados.
+# Operaciones:
+# .keys() —> Retorna la clave de nuestro elemento
+# .values()—> Retorna una lista de elementos (valores del diccionario)
+# .items() —> Devuelve lista de tuplas (primero la clave y luego el valor)
+# .clear() —> Elimina todos los items del diccionario
+# .pop(“n”) —> Elimina el elemento ingresado
 print('Imprimir Diccionario')
-thisdict = {"brand": "Ford", "model": "Mustang", "year": 1964}
+thisdict = {
+    "brand": "Ford", 
+    "model": "Mustang", 
+    "year": 1964,
+    "costo": 24000,
+    "made in": "Italy"
+    }
+print('thisdict.keys()')
+print(thisdict.keys())
+print('thisdict.values()')
+print(thisdict.values())
+print('thisdict.items()')
+print(thisdict.items())
+
 print(thisdict)
 print('Imprimir Diccionario.model')
 print(thisdict["model"])
 
-# appending o agregar elemento of language tuple
+# Language_lista with/extend language_tuple
 language.extend(language_tuple)
 print('Language_lista with/extend language_tuple')
 print(language[:])
-# appending o agregar element of language set
+# Language_lista with/extend language_set
 language.extend(language_set)
 print('Language_lista with/extend language_set')
 print(language[:])

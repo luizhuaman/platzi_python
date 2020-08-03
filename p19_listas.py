@@ -61,11 +61,11 @@ print(mylist)
 
 # Ordenar una Lista:
 mylist = ['cde', 'fgh', 'abc', 'klm', 'opq']
-list = [3, 5, 2, 4, 1]
+lista = [3, 5, 2, 4, 1]
 mylist.sort()
-list.sort()
+lista.sort()
 print(mylist)
-print(list)
+print(lista)
 
 # Invertir una lista:
 mylist = [1, 2, 3, 4, 5]
@@ -112,8 +112,10 @@ print(list1 * 2)
 
 # Listas y cadenas:
 mystr = "LikeGeeks"
-mylist = list(mystr)
-print(mylist)
+print(mystr)
+print(type(mystr))
+mylist2 = list(mystr)
+print(mylist2)
 
 mystr = "LikeGeeks"
 mystr = "Welcome to likegeeks website"
@@ -148,5 +150,94 @@ double = [i * 2 for i in mylist ]
 pares = [i for i in my_list if i % 2 == 0]
 print(pares)
 
-#Diccionarios
+#DICCIONARIOS
+my_dict = {
+    'David' : 35,
+    'Erika' : 50,
+    'Jaime' : 85
+}
 
+#SI NO ENCUENTRA LA LLAVE DE JUAN NOS RETORNA 30
+print(my_dict.get('Juan',30))
+my_dict['Pedro'] = 70
+del my_dict['Jaime']
+
+for llave in my_dict.keys():
+    print(llave)
+
+for valor in my_dict.values():
+    print(valor)
+
+for llave, valor in my_dict.items():
+    print(llave , valor)
+
+my_dict2={'Juan' : 20, 'Ana': 30, 'Arturo' : 45}
+print(my_dict2)
+Nuevo_dict = {k:v for (k,v) in my_dict2.items() if v < 40 }
+Estudiantes_dict = {'Estudiantes ' + k:v*2 for (k,v) in my_dict.items()}
+print(Nuevo_dict)
+
+# dict_variable = {key:valuefor key,valuein dictionary.items()}
+# dict_variable = {key:operation(value) for key, valuein dictionary.items()}
+# dict_variable = {key: valuefor key, valuein dictionary.items() ifvalue#condition
+# dict_variable = {key: valuefor key, valuein dictionary.items() if key #condition
+
+"""
+Diccionary comprehension:
+Es una elegante y concisa forma de crear diccionarios
+"""
+
+#creacion de un diccionario sin usar metodo comprehension
+cuadrado_dict = dict()
+for num in range(1, 11):
+    cuadrado_dict[num] = num*num
+
+print(cuadrado_dict)
+
+#cracions del diccionario usando diccionary comprehension
+cuadrado_dict_2 = {num: num*num for num in range(1, 11)}
+print(cuadrado_dict)
+
+"""
+sintaxis dictionary comprehension:
+dictionary = {key: value for vars in iterable}
+
+haciendo una comparacion con el ejemplo anterior:
+
+{key:  value  for vars in iterable}
+  |      |         |         |
+{num: num*num for num in range(1, 11)}
+"""
+
+#ejemplo diccionario con condicional
+#cracion de un diccionario con nombres y edades
+dict_original = {
+    'jack': 38, 
+    'michael': 48,
+    'guido': 57,
+    'john': 33,
+}
+
+#crear un nuevo diccionario con la informacion de las personas con edad par
+dict_par = {k : v for (k, v) in dict_original.items() if v % 2 == 0}
+print(dict_par)
+
+
+print('Usamos la funcion enumerate()')
+diccionario = {llave:valor for llave,valor in enumerate( range(1,20) )}
+
+print (diccionario)
+
+
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+print(my_dict)
+
+double_dict1 = {k:v*2 for (k,v) in my_dict.items()}
+print(double_dict1)
+#Resultado
+#{'a': 2, 'b': 4, 'c': 6, 'd': 8, 'e': 10}
+
+numbers = range(10)
+new_dict_comp = {n:n**2 for n in numbers if n%2 == 0}
+print(new_dict_comp)
+#0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
